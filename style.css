@@ -1,0 +1,141 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+/* Smooth scroll */
+html{
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+.header{
+    margin:10px;
+    padding:30px;
+    background-color: hwb(0 8% 74% / 0.753);
+    color:white;
+    text-align:center;
+    border-radius:10px;
+    animation: fadeDown 1s ease-in-out;
+}
+
+.header h1{
+    font-size:40px;
+    letter-spacing:2px;
+}
+
+/* NAV SECTION */
+.section{
+    margin:10px;
+    padding:20px;
+    background-color:white;
+    color:hwb(0 8% 74% / 0.753);
+    display:flex;
+    justify-content:space-around;
+    font-size:22px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.section p{
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+
+.section p:hover{
+    transform: scale(1.2);
+    color:black;
+}
+
+/* ABOUT */
+.abt{
+    margin:10px;
+    padding:25px;
+    background-color:hwb(0 8% 74% / 0.753);
+    color:white;
+    border-radius:20px;
+    font-size:18px;
+    line-height:1.6;
+    animation: fadeUp 1.2s ease-in-out;
+}
+
+/* IMAGE GALLERY */
+.image_gallary{
+    margin:10px;
+    padding:20px;
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap:20px;
+}
+
+/* CARD STYLE */
+.image_gallary div{
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+}
+
+/* HOVER EFFECT */
+.image_gallary div:hover{
+    transform: translateY(-10px) scale(1.05);
+}
+
+/* IMAGE FIX (SAME SIZE + HIGH QUALITY) */
+.image_gallary img{
+    width:220px;
+    height:220px;
+    object-fit: cover;   /* IMPORTANT for same size */
+    border-radius:10px;
+    transition: transform 0.4s ease;
+}
+
+/* ZOOM EFFECT */
+.image_gallary img:hover{
+    transform: scale(1.1);
+}
+
+/* TEXT */
+.image_gallary p{
+    margin-top:10px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+.footer{
+    margin:10px;
+    padding:25px;
+    background-color:hwb(0 8% 74% / 0.753);
+    color:white;
+    text-align:center;
+    border-radius:10px;
+    animation: fadeUp 1.5s ease-in-out;
+}
+
+
+/* ANIMATIONS */
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform: translateY(-50px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
